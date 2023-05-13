@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #DCDEEB;
+  color: #fff;
+}
+
+.title {
+  text-align: center;
+  color: #070F22;
+  font-size: 3.625rem;
+}
+
+.alert {
+  margin: 1.875rem auto;
+  max-width: 57.5rem;
+  background-color: #db0e0e;
+  height: 4.375rem;
+  border-radius: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.row {
+  margin: 2.5rem auto 0 auto;
+  width: 57.5rem;
+  display: flex;
+  background-color: #070F22;
+  height: 5rem;
+  border-radius: 0.625rem;
+  font-size: 1.25rem;
+  align-items: center;
+  padding: 0.625rem;
+}
+.row__input {
+  width: 20%;
+  height: 1.875rem;
+  font-size: 0.9375rem;
+  margin: 0 0.9375rem 0 0.625rem;
+  border-radius: 0.3125rem;
+  background-color: #fff;
+  border: none;
+}
+.row__input:focus {
+  outline: 0.1875rem solid #6A6E83;
+}
+.row__input:hover {
+  outline: 0.1875rem solid #6A6E83;
+  cursor: pointer;
+}
+.row__input--large {
+  width: 45%;
+}
+.row__button {
+  width: 5rem;
+  height: 1.875rem;
+  border-radius: 0.3125rem;
+  border: none;
+}
+
+.table {
+  padding: 0 0.9375rem;
+  margin: 1.875rem auto 0 auto;
+  width: 57.5rem;
+  background-color: #070F22;
+  border: none;
+  border-spacing: 0;
+  border-radius: 0.3125rem;
+}
+.table__edit {
+  background-color: #E9E9ED;
+  border: none;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 0.3125rem;
+  margin-right: 0.625rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.table__edit-image {
+  width: 100%;
+  height: auto;
+}
+.table__delete {
+  background-color: #E9E9ED;
+  border: none;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 0.3125rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.table__delete-image {
+  width: 100%;
+  height: auto;
+}
+
+.table__th {
+  height: 3.125rem;
+  text-align: left;
+}
+
+.table td {
+  height: 3.125rem;
+  border-top: 0.1875rem solid #6A6E83;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  text-align: center;
+}
+
+.table__th--center {
+  text-align: center;
+}
+
+button {
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #6A6E83;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(0.1875rem);
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  border: 0.1875rem solid #6A6E83;
+  border-radius: 0.625rem;
+  left: 50%;
+  top: 30rem;
+  transform: translate(-50%, -50%);
+  background-color: #070F22;
+  width: 43.75rem;
+  padding: 1.875rem;
+  z-index: 2;
+}
+.modal__paragraph {
+  display: inline-block;
+}
+.modal__footer {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  height: 2.1875rem;
+}
+.modal__input {
+  margin: 1.25rem 0 0.625rem 0;
+  border: none;
+  border-radius: 0.3125rem;
+  width: 100%;
+  height: 1.875rem;
+}
+.modal__input--description {
+  height: 9.375rem;
+  font-size: 1.25rem;
+}
+.modal__input:focus {
+  outline: 0.1875rem solid #6A6E83;
+}
+.modal__input:hover {
+  outline: 0.1875rem solid #6A6E83;
+  cursor: pointer;
+}
+.modal__button {
+  width: 4.375rem;
+  border: none;
+  margin-left: 0.625rem;
+  border-radius: 0.1875rem;
+}
+
+@media screen and (max-width: 950px) {
+  .title {
+    font-size: 2rem;
+  }
+  .row {
+    width: 100%;
+    display: block;
+    height: auto;
+    padding: 10px;
+  }
+  .row__title {
+    display: block;
+  }
+  .row__input {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+  }
+  .row__button {
+    width: 100%;
+    height: 2.5rem;
+    margin: 10px auto;
+  }
+  .table {
+    width: 100%;
+  }
+  button:hover {
+    transform: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  .table__delete {
+    width: 55%;
+    height: auto;
+    margin: 5px 0;
+  }
+  .table__edit {
+    width: 55%;
+    height: auto;
+    margin: 5px 0;
+  }
+}
+
+/*# sourceMappingURL=Styles.css.map */

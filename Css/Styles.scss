@@ -1,0 +1,274 @@
+$colorPrimary: #070F22;
+$colorSecondary: #6A6E83;
+$colorAlert: #db0e0e;
+$bgColor: #DCDEEB;
+
+*{
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: $bgColor;
+  color: #fff;
+}
+
+.title{
+  text-align: center;
+  color: $colorPrimary;
+  font-size: 3.625rem;
+}
+
+.alert{
+  margin: 1.875rem auto;
+  max-width: 57.5rem;
+  background-color: $colorAlert;
+  height: 4.375rem;
+  border-radius: 0.625rem;
+  justify-content: center;
+  align-items: center; 
+  display: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.row{
+  margin: 2.5rem auto 0 auto;
+  width: 57.5rem;
+  display: flex;
+  background-color: $colorPrimary;
+  height: 5rem;
+  border-radius: 0.625rem;
+  font-size: 1.25rem;
+  align-items: center;
+  padding: 0.625rem;
+  &__input{
+    width: 20%;
+    height: 1.875rem;
+    font-size: 0.9375rem;
+    margin: 0 0.9375rem 0 0.625rem;
+    border-radius: 0.3125rem;
+    background-color: #fff;
+    border: none;
+  }
+  &__input:focus{
+    outline: 0.1875rem solid $colorSecondary; 
+  }
+
+  &__input:hover{
+    outline: 0.1875rem solid $colorSecondary;
+    cursor: pointer;
+  }
+
+  &__input--large{
+    width: 45%;
+  }
+  &__button{
+    width: 5rem;
+    height: 1.875rem;
+    border-radius: 0.3125rem;
+    border: none;
+  }
+}
+
+.table{
+  padding: 0 0.9375rem;
+  margin: 1.875rem auto 0 auto;
+  width: 57.5rem;
+  background-color: #070F22;
+  border: none;
+  border-spacing: 0; 
+  border-radius: 0.3125rem;
+  
+
+  &__edit{
+    background-color: #E9E9ED;
+    border: none;
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 0.3125rem;
+    margin-right: 0.625rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    &-image{
+    width: 100%;
+    height: auto;
+    }
+  }
+
+  &__delete{
+    background-color: #E9E9ED;
+    border: none;
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 0.3125rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    &-image{
+    width: 100%;
+    height: auto;
+    }
+  }
+
+}
+.table__th{
+  height: 3.125rem;
+  text-align: left;
+    }
+.table td {
+  height: 3.125rem;
+  border-top: 0.1875rem solid  $colorSecondary;
+}
+
+
+
+.checkbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons{
+  text-align: center;
+}
+
+
+.table__th--center{
+  text-align: center;
+}
+
+button{
+transition: all 0.3s;
+}
+
+button:hover {
+  background-color: $colorSecondary;
+  transform: scale(1.1);
+  cursor:pointer;
+}
+
+
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(0.1875rem);
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+  .modal{
+  display: none;
+  position: absolute;
+  border: 0.1875rem solid $colorSecondary;
+  border-radius: 0.625rem;
+  left: 50%;
+  top: 30rem;
+  transform: translate(-50%, -50%);
+  background-color: #070F22;
+  width: 43.75rem;
+  padding: 1.875rem;
+  z-index: 2;
+    
+  &__paragraph{
+    display: inline-block;
+  }
+
+  &__footer{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    height: 2.1875rem;
+  }
+
+  &__input{
+      margin: 1.25rem 0 0.625rem 0;
+      border: none;
+      border-radius: 0.3125rem;
+      width: 100%;
+      height: 1.875rem;
+      &--description{
+        height: 9.375rem;  
+        font-size: 1.25rem;
+      }
+    }
+
+  &__input:focus{
+    outline: 0.1875rem solid $colorSecondary; 
+  }
+
+  &__input:hover{
+    outline: 0.1875rem solid $colorSecondary;
+    cursor: pointer;
+  }
+
+  &__button{
+    width: 4.375rem;
+    border: none;
+    margin-left: 0.625rem;
+    border-radius: 0.1875rem;
+    }
+  }
+
+
+
+
+@media screen and (max-width: 950px) {
+  .title{
+    font-size: 2rem;
+  }
+  
+  .row {
+    width: 100%;
+    display: block;
+    height: auto;
+    padding: 10px;
+    &__title{
+      display: block;
+    }
+    &__input{
+      width: 100%;
+      display: block;
+      margin: 10px 0;
+    }
+    &__button{
+      width: 100%;
+      height: 2.5rem;
+      margin: 10px auto;
+    }
+  }
+
+  .table{
+    width: 100%;
+  }
+  
+  button:hover {
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .table{
+    &__delete{
+      width: 55%;
+      height: auto;
+      margin: 5px 0;
+    }
+
+    &__edit{
+      width: 55%;
+      height: auto;
+      margin: 5px 0;
+
+    }
+  }
+}
