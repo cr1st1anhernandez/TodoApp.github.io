@@ -6,3 +6,6 @@ perfect for anyone who wants to learn JavaScript and improve their productivity 
 I hope you enjoy using this app as much as I enjoyed creating it. 
 If you have any feedback or suggestions, feel free to reach out to me. Happy tasking!
 # TodoApp.github.io
+
+
+![Preview](assets/images/preview.png)
